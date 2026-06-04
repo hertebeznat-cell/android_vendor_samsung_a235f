@@ -41,7 +41,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/vendor/lib,$(TARGET_COPY_OUT_VENDOR)/lib) \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/vendor/lib64,$(TARGET_COPY_OUT_VENDOR)/lib64)
 
-# Vendor configuration files
+# Vendor configuration files (includes etc/init, etc/permissions, etc.)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/etc,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -49,25 +49,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/app,$(TARGET_COPY_OUT_VENDOR)/app)
 
-# DSP firmware
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/dsp,$(TARGET_COPY_OUT_VENDOR)/dsp)
-
-# Vendor init scripts
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/etc/init,$(TARGET_COPY_OUT_VENDOR)/etc/init)
-
 # ============================================================
 # ODM partition blobs
 # ============================================================
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/odm/etc,$(TARGET_COPY_OUT_ODM)/etc)
-
-# ============================================================
-# System libraries (if needed for vendor dependencies)
-# ============================================================
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/system/lib,$(TARGET_COPY_OUT_SYSTEM)/lib) \
-    $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/system/lib64,$(TARGET_COPY_OUT_SYSTEM)/lib64)
