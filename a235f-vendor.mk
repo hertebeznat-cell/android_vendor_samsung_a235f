@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += \
     hyper_default_sec_xml_vintf \
     vendor_samsung_hardware_sehradio_manifest_2_30_xml_vintf \
     android_hardware_sensors_2_0_multihal_xml_vintf \
-    manifest_xml_vintf \
+    manifest_manifest_xml_vintf \
     vendor_samsung_hardware_radio_exclude_qcom_xml_vintf \
     vendor_samsung_hardware_tlc_kg_1_1_manifest_xml_vintf \
     android_hardware_usb_1_3_service_coral_xml_vintf \

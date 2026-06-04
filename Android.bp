@@ -105,7 +105,7 @@ vintf_fragment {
 }
 
 vintf_fragment {
-    name: "manifest_xml_vintf",
+    name: "manifest_manifest_xml_vintf",
     src: "proprietary/vendor/etc/vintf/manifest/manifest.xml",
     soc_specific: true,
 }
