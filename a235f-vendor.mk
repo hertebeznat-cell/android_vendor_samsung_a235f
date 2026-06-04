@@ -3,25 +3,22 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Vendor product makefile for Samsung Galaxy A23 (SM-A235F)
+# Auto-generated from stock vendor.img and odm.img extraction.
 #
-# NOTE: This file provides the framework for copying proprietary blobs.
-# Blobs must first be extracted using extract-files.sh from the device tree.
-# Until blobs are extracted, this file serves as a skeleton.
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/a235f
 
-# Prebuilt APKs (extract from stock firmware)
-# PRODUCT_PACKAGES += \
-#     SamsungCamera \
-#     SamsungGallery
+# ============================================================
+# Vendor partition blobs
+# ============================================================
 
-# Audio
+# Audio HALs and effects
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib/soundfx,$(TARGET_COPY_OUT_VENDOR)/lib/soundfx) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib64/soundfx,$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx)
 
-# Display / GPU
+# Display / GPU (Adreno)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib/egl,$(TARGET_COPY_OUT_VENDOR)/lib/egl) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib64/egl,$(TARGET_COPY_OUT_VENDOR)/lib64/egl)
@@ -30,7 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/firmware,$(TARGET_COPY_OUT_VENDOR)/firmware)
 
-# HALs
+# Hardware Abstraction Layer modules
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib/hw,$(TARGET_COPY_OUT_VENDOR)/lib/hw) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/lib64/hw,$(TARGET_COPY_OUT_VENDOR)/lib64/hw)
@@ -39,16 +36,38 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/bin,$(TARGET_COPY_OUT_VENDOR)/bin)
 
-# Vendor libraries
+# Vendor shared libraries (lib + lib64)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/vendor/lib,$(TARGET_COPY_OUT_VENDOR)/lib) \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/vendor/lib64,$(TARGET_COPY_OUT_VENDOR)/lib64)
 
-# Vendor configs
+# Vendor configuration files
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/etc,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# System libraries (if needed)
+# Vendor apps (APKs)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/app,$(TARGET_COPY_OUT_VENDOR)/app)
+
+# DSP firmware
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/dsp,$(TARGET_COPY_OUT_VENDOR)/dsp)
+
+# Vendor init scripts
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/vendor/etc/init,$(TARGET_COPY_OUT_VENDOR)/etc/init)
+
+# ============================================================
+# ODM partition blobs
+# ============================================================
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/odm/etc,$(TARGET_COPY_OUT_ODM)/etc)
+
+# ============================================================
+# System libraries (if needed for vendor dependencies)
+# ============================================================
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/system/lib,$(TARGET_COPY_OUT_SYSTEM)/lib) \
     $(call find-copy-subdir-files,*.so,$(LOCAL_PATH)/proprietary/system/lib64,$(TARGET_COPY_OUT_SYSTEM)/lib64)
