@@ -1,6 +1,4 @@
 service hdmtlc-hal-service /vendor/bin/hw/vendor.samsung.hardware.tlc.hdm@1.1-service
-    interface vendor.samsung.hardware.tlc.hdm@1.0::ISehHdm default
-    interface vendor.samsung.hardware.tlc.hdm@1.1::ISehHdm default
     class hal
     user system
     group system

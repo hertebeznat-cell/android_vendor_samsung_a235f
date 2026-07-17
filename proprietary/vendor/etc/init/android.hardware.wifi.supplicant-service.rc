@@ -11,8 +11,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     interface android.hardware.wifi.supplicant@1.2::ISupplicant default
     interface android.hardware.wifi.supplicant@1.3::ISupplicant default
     # SEC_PRODUCT_FEATURE_WLAN_SUPPLICANT_HAL
-    interface vendor.samsung.hardware.wifi.supplicant@3.0::ISehSupplicant default
-    interface vendor.samsung.hardware.wifi.supplicant@3.1::ISehSupplicant default
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
