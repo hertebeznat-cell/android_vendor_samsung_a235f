@@ -9,8 +9,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/a235f
 PRODUCT_PACKAGES += \
-    compatibility_matrix_xml_vintf \
-    manifest_xml_vintf \
     vendor_samsung_hardware_thermal_1_0_manifest_xml_vintf \
     manifest_android_hardware_drm_1_3_service_widevine_xml_vintf \
     lights_default_sec_xml_vintf \
@@ -311,7 +309,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
     vendor/samsung/a235f/proprietary/vendor/bin/diag_callback_sample:$(TARGET_COPY_OUT_VENDOR)/bin/diag_callback_sample \
     vendor/samsung/a235f/proprietary/vendor/bin/diag_klog:$(TARGET_COPY_OUT_VENDOR)/bin/diag_klog \
-    vendor/samsung/a235f/proprietary/vendor/bin/toybox_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/toybox_vendor \
     vendor/samsung/a235f/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/samsung/a235f/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/samsung/a235f/proprietary/vendor/bin/diag_uart_log:$(TARGET_COPY_OUT_VENDOR)/bin/diag_uart_log \
@@ -321,7 +318,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/bin/nqnfcinfo:$(TARGET_COPY_OUT_VENDOR)/bin/nqnfcinfo \
     vendor/samsung/a235f/proprietary/vendor/bin/vendor.samsung.hardware.security.proca@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.samsung.hardware.security.proca@2.0-service \
     vendor/samsung/a235f/proprietary/vendor/bin/factory.ssc:$(TARGET_COPY_OUT_VENDOR)/bin/factory.ssc \
-    vendor/samsung/a235f/proprietary/vendor/bin/install-recovery.sh:$(TARGET_COPY_OUT_VENDOR)/bin/install-recovery.sh \
     vendor/samsung/a235f/proprietary/vendor/bin/wvkprov:$(TARGET_COPY_OUT_VENDOR)/bin/wvkprov \
     vendor/samsung/a235f/proprietary/vendor/bin/dumpsys:$(TARGET_COPY_OUT_VENDOR)/bin/dumpsys \
     vendor/samsung/a235f/proprietary/vendor/bin/ssgtzd:$(TARGET_COPY_OUT_VENDOR)/bin/ssgtzd \
@@ -1932,7 +1928,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/sound_trigger_mixer_paths_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_qrd.xml \
-    vendor/samsung/a235f/proprietary/vendor/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default \
     vendor/samsung/a235f/proprietary/vendor/etc/dax3_media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dax3_media_codecs_dolby_audio.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/samsung/a235f/proprietary/vendor/etc/media_codecs_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor.xml \
@@ -1963,7 +1958,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/samsung/a235f/proprietary/vendor/etc/init/vendor.samsung.hardware.tlc.ucm@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.tlc.ucm@2.0-service.rc \
     vendor/samsung/a235f/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
-    vendor/samsung/a235f/proprietary/vendor/etc/init/vendor_flash_recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor_flash_recovery.rc \
     vendor/samsung/a235f/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/samsung/a235f/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/samsung/a235f/proprietary/vendor/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc \
@@ -2322,12 +2316,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/lib/camera/com.samsung.tuned.lsi_gc5035.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.tuned.lsi_gc5035.bin \
     vendor/samsung/a235f/proprietary/vendor/lib/camera/com.samsung.tuned.lsi_s5kjn1.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.tuned.lsi_s5kjn1.bin \
     vendor/samsung/a235f/proprietary/vendor/lib/camera/com.samsung.tuned.lsi_sr846d.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.tuned.lsi_sr846d.bin \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3_wlan.ko \
-    vendor/samsung/a235f/proprietary/vendor/lib/modules/rdbg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rdbg.ko \
     vendor/samsung/a235f/proprietary/vendor/lib64/camera/caldata/0_p24c128e_s5kjn1_SEC_Awb_before_convert.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/caldata/0_p24c128e_s5kjn1_SEC_Awb_before_convert.bin \
     vendor/samsung/a235f/proprietary/vendor/lib64/camera/caldata/0_p24c128e_s5kjn1_SEC_Lsc_before_convert.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/caldata/0_p24c128e_s5kjn1_SEC_Lsc_before_convert.bin \
     vendor/samsung/a235f/proprietary/vendor/lib64/camera/caldata/2_gc5035_uw_SEC_Awb_before_convert.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/caldata/2_gc5035_uw_SEC_Awb_before_convert.bin \

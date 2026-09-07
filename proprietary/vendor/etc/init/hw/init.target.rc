@@ -88,8 +88,7 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller 4e00000.dwc3
 
-#Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
+# WLAN is built into the pinned AOSP kernel (CONFIG_QCA_CLD_WLAN=y).
 
 #HyPer Permission
     chmod 0664 /sys/class/devfreq/soc\:qcom,cpu4-cpu-ddr-latfloor/max_freq

@@ -9,4 +9,4 @@
 BOARD_VNDK_VERSION := current
 
 # Vendor security patch level
-VENDOR_SECURITY_PATCH := 2025-08-01
+VENDOR_SECURITY_PATCH := 2026-02-05
