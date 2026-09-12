@@ -2,23 +2,9 @@
 soong_namespace {
 }
 
-prebuilt_etc_xml {
-    name: "compatibility_matrix_xml_vintf",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/compatibility_matrix.xml",
-    filename_from_src: true,
-    sub_dir: "vintf",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_xml_vintf",
-    owner: "samsung",
-    src: "proprietary/vendor/etc/vintf/manifest.xml",
-    filename_from_src: true,
-    sub_dir: "vintf",
-    soc_specific: true,
-}
+// Base manifest and device matrix are inputs to assemble_vintf through
+// DEVICE_MANIFEST_FILE / DEVICE_MATRIX_FILE in the device BoardConfig.
+// Do not declare another installer for those generated output paths.
 
 vintf_fragment {
     name: "vendor_samsung_hardware_thermal_1_0_manifest_xml_vintf",
