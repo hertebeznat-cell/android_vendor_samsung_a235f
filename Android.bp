@@ -2,6 +2,17 @@
 soong_namespace {
 }
 
+// Inputs for a non-installable compatibility test against the new platform.
+// Keep stock CIL intact: dropping unresolved symbols would weaken the test.
+filegroup {
+    name: "a23_stock_vendor_policy_inputs",
+    srcs: [
+        "proprietary/vendor/etc/selinux/plat_pub_versioned.cil",
+        "proprietary/vendor/etc/selinux/vendor_sepolicy.cil",
+    ],
+    visibility: ["//device/samsung/a23:__pkg__"],
+}
+
 // Base manifest and device matrix are inputs to assemble_vintf through
 // DEVICE_MANIFEST_FILE / DEVICE_MATRIX_FILE in the device BoardConfig.
 // Do not declare another installer for those generated output paths.
