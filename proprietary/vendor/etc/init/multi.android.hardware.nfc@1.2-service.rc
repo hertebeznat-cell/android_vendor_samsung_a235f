@@ -1,8 +1,6 @@
-service vendor.nfc_hal_service /vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
-    disabled
-    class hal
-    user nfc
-    group nfc net_bt_admin
+# The NXP service and its HIDL interfaces are declared in
+# nxp.android.hardware.nfc@1.2-service.rc. Keep one service definition so init
+# does not discard that declaration after parsing this file first.
 
 service nfc_hal_service /vendor/bin/hw/sec.android.hardware.nfc@1.2-service
     disabled

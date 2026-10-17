@@ -5,6 +5,10 @@
 # Vendor product makefile for Samsung Galaxy A23 (SM-A235F)
 # Auto-generated from stock vendor.img and odm.img extraction.
 #
+# SELinux inputs are exported by Android.bp and installed by the platform
+# modules selected with a23.use_stock_vendor_policy. Do not copy them again;
+# the obsolete stock ODM precompiled policy is rebuilt for the new platform.
+
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/a235f
@@ -2236,18 +2240,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/etc/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_seapp_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_seapp_contexts \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_service_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_service_contexts \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/plat_pub_versioned.cil:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/plat_pub_versioned.cil \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/plat_sepolicy_vers.txt:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/plat_sepolicy_vers.txt \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/selinux_denial_metadata:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/selinux_denial_metadata \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_hwservice_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_hwservice_contexts \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_file_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_file_contexts \
     vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_sepolicy_version:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_sepolicy_version \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_mac_permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_mac_permissions.xml \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_sepolicy.cil:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_sepolicy.cil \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vndservice_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vndservice_contexts \
-    vendor/samsung/a235f/proprietary/vendor/etc/selinux/vendor_property_contexts:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/vendor_property_contexts \
     vendor/samsung/a235f/proprietary/vendor/etc/selinux/sk/authorize.xml:$(TARGET_COPY_OUT_VENDOR)/etc/selinux/sk/authorize.xml \
     vendor/samsung/a235f/proprietary/vendor/etc/hyper/config_hyper_permission.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_hyper_permission.json \
     vendor/samsung/a235f/proprietary/vendor/etc/hyper/config_chipset.json:$(TARGET_COPY_OUT_VENDOR)/etc/hyper/config_chipset.json \
@@ -2264,7 +2257,6 @@ PRODUCT_COPY_FILES +=
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/odm/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_ODM)/etc/NOTICE.xml.gz \
-    vendor/samsung/a235f/proprietary/odm/etc/build.prop:$(TARGET_COPY_OUT_ODM)/etc/build.prop \
     vendor/samsung/a235f/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     vendor/samsung/a235f/proprietary/odm/etc/permissions/sku_hcesimese/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_hcesimese/android.hardware.nfc.hcef.xml \
     vendor/samsung/a235f/proprietary/odm/etc/permissions/sku_hcesimese/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_hcesimese/android.hardware.nfc.ese.xml \
@@ -2286,13 +2278,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/odm/etc/permissions/sku_hceese/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_hceese/android.hardware.nfc.hce.xml \
     vendor/samsung/a235f/proprietary/odm/etc/permissions/sku_hceese/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_hceese/android.hardware.nfc.xml \
     vendor/samsung/a235f/proprietary/odm/etc/permissions/sku_hceese/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_hceese/com.nxp.mifare.xml \
-    vendor/samsung/a235f/proprietary/odm/etc/selinux/precompiled_sepolicy.plat_sepolicy_and_mapping.sha256:$(TARGET_COPY_OUT_ODM)/etc/selinux/precompiled_sepolicy.plat_sepolicy_and_mapping.sha256 \
-    vendor/samsung/a235f/proprietary/odm/etc/selinux/precompiled_sepolicy.product_sepolicy_and_mapping.sha256:$(TARGET_COPY_OUT_ODM)/etc/selinux/precompiled_sepolicy.product_sepolicy_and_mapping.sha256 \
-    vendor/samsung/a235f/proprietary/odm/etc/selinux/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256:$(TARGET_COPY_OUT_ODM)/etc/selinux/precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256 \
-    vendor/samsung/a235f/proprietary/odm/etc/selinux/precompiled_sepolicy:$(TARGET_COPY_OUT_ODM)/etc/selinux/precompiled_sepolicy
 
-# Stock EYG1 kernel modules and camera calibration/model data. These files are
-# consumed directly by vendor init and the proprietary Samsung camera stack.
+# SEZB1 camera calibration/model data used by the proprietary Samsung stack.
+# Kernel modules must come from the same source build as the installed kernel.
 PRODUCT_COPY_FILES += \
     vendor/samsung/a235f/proprietary/vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kjn1.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.sensormodule.0_lsi_s5kjn1.bin \
     vendor/samsung/a235f/proprietary/vendor/lib/camera/com.samsung.sensormodule.1_0_lsi_gc08a3.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.samsung.sensormodule.1_0_lsi_gc08a3.bin \

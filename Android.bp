@@ -2,8 +2,8 @@
 soong_namespace {
 }
 
-// Inputs for a non-installable compatibility test against the new platform.
-// Keep stock CIL intact: dropping unresolved symbols would weaken the test.
+// Unmodified SEZB1 policy inputs. The selected platform modules compile/check
+// these files and own their installation; no raw copy may target those paths.
 filegroup {
     name: "a23_stock_vendor_policy_inputs",
     srcs: [
@@ -11,6 +11,105 @@ filegroup {
         "proprietary/vendor/etc/selinux/vendor_sepolicy.cil",
     ],
     visibility: ["//device/samsung/a23:__pkg__"],
+}
+
+filegroup {
+    name: "a23_stock_plat_pub_versioned_cil",
+    srcs: ["proprietary/vendor/etc/selinux/plat_pub_versioned.cil"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_sepolicy_cil",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_sepolicy.cil"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_plat_sepolicy_vers_txt",
+    srcs: ["proprietary/vendor/etc/selinux/plat_sepolicy_vers.txt"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_file_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_file_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_hwservice_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_hwservice_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_property_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_property_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_seapp_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_seapp_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_service_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_service_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vndservice_contexts",
+    srcs: ["proprietary/vendor/etc/selinux/vndservice_contexts"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_mac_permissions_xml",
+    srcs: ["proprietary/vendor/etc/selinux/vendor_mac_permissions.xml"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
+}
+
+filegroup {
+    name: "a23_stock_vendor_bug_map",
+    srcs: ["proprietary/vendor/etc/selinux/selinux_denial_metadata"],
+    visibility: [
+        "//system/sepolicy:__subpackages__",
+        "//device/samsung/a23:__pkg__",
+    ],
 }
 
 // Base manifest and device matrix are inputs to assemble_vintf through
@@ -301,7 +400,7 @@ prebuilt_etc_xml {
     src: "proprietary/odm/etc/vintf/manifest_hceese.xml",
     filename_from_src: true,
     sub_dir: "vintf",
-    soc_specific: true,
+    device_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -310,7 +409,7 @@ prebuilt_etc_xml {
     src: "proprietary/odm/etc/vintf/manifest_hce.xml",
     filename_from_src: true,
     sub_dir: "vintf",
-    soc_specific: true,
+    device_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -319,7 +418,7 @@ prebuilt_etc_xml {
     src: "proprietary/odm/etc/vintf/manifest_hcesim.xml",
     filename_from_src: true,
     sub_dir: "vintf",
-    soc_specific: true,
+    device_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -328,7 +427,7 @@ prebuilt_etc_xml {
     src: "proprietary/odm/etc/vintf/manifest_hcesimese.xml",
     filename_from_src: true,
     sub_dir: "vintf",
-    soc_specific: true,
+    device_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -337,5 +436,5 @@ prebuilt_etc_xml {
     src: "proprietary/odm/etc/vintf/manifest_disabled.xml",
     filename_from_src: true,
     sub_dir: "vintf",
-    soc_specific: true,
+    device_specific: true,
 }
