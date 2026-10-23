@@ -1,1 +1,0 @@
-"!libscenedetector.uniplugin@1.0.so",libsocial_image_enhancement.uniplugin@1.0.so

@@ -1,9 +1,3 @@
-# Generated build definitions and local audit tools use portable LF endings.
-*.mk text eol=lf
-*.bp text eol=lf
-*.py text eol=lf
-*.json text eol=lf
-*.md text eol=lf
-
-# Stock blobs/configuration retain byte provenance, including their line ends.
-proprietary/** -text
+* text=auto eol=lf
+images/** -text
+reference/** -text

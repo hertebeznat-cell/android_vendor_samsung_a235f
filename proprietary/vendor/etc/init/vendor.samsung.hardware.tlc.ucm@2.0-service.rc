@@ -1,5 +1,0 @@
-service ucmtlc-hal-service /vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service
-    class hal
-    user system
-    group system
-    disabled
