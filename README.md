@@ -1,6 +1,6 @@
 # Galaxy A23 4G (SM-A235F) — стоковые vendor/odm SEZB1
 
-Ветка `cnb-clean`. Содержит **неизменённые** образы `vendor.img` и `odm.img`
+Ветка `main` (ранее `cnb-clean`). Содержит **неизменённые** образы `vendor.img` и `odm.img`
 из `A235FXXSEEZB1` (AP `..._MULTI_CERT_meta_OS14`), раздел `super`
 группы `qti_dynamic_partitions`.
 
