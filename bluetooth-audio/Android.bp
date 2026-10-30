@@ -9,7 +9,7 @@
 cc_prebuilt_library_shared {
     name: "a235f_android.hardware.bluetooth.audio@2.0-impl",
     stem: "android.hardware.bluetooth.audio@2.0-impl",
-    odm: true,
+    device_specific: true,
     relative_install_path: "hw",
     compile_multilib: "32",
     arch: {
@@ -26,7 +26,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "a235f_audio.bluetooth.default",
     stem: "audio.bluetooth.default",
-    odm: true,
+    device_specific: true,
     relative_install_path: "hw",
     compile_multilib: "32",
     arch: {
@@ -43,7 +43,7 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "a235f_libbluetooth_audio_session",
     stem: "libbluetooth_audio_session",
-    odm: true,
+    device_specific: true,
     compile_multilib: "32",
     arch: {
         arm: {
