@@ -1,3 +1,5 @@
 * text=auto eol=lf
 images/** -text
 reference/** -text
+proprietary/** -text
+bluetooth-audio/lib/** -text

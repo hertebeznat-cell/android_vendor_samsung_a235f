@@ -1,0 +1,57 @@
+// Copyright (C) 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+// AOSP Bluetooth Audio HAL 2.0 (HIDL) for the stock Android 11 vendor, see
+// README.md. Installed to /odm, where the stock audio service and libhardware
+// look before /vendor. Built for VNDK 30, so ELF checks against this tree's
+// libraries do not apply.
+
+cc_prebuilt_library_shared {
+    name: "a235f_android.hardware.bluetooth.audio@2.0-impl",
+    stem: "android.hardware.bluetooth.audio@2.0-impl",
+    odm: true,
+    relative_install_path: "hw",
+    compile_multilib: "32",
+    arch: {
+        arm: {
+            srcs: ["lib/hw/android.hardware.bluetooth.audio@2.0-impl.so"],
+        },
+    },
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "a235f_audio.bluetooth.default",
+    stem: "audio.bluetooth.default",
+    odm: true,
+    relative_install_path: "hw",
+    compile_multilib: "32",
+    arch: {
+        arm: {
+            srcs: ["lib/hw/audio.bluetooth.default.so"],
+        },
+    },
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "a235f_libbluetooth_audio_session",
+    stem: "libbluetooth_audio_session",
+    odm: true,
+    compile_multilib: "32",
+    arch: {
+        arm: {
+            srcs: ["lib/libbluetooth_audio_session.so"],
+        },
+    },
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+}
