@@ -4,7 +4,7 @@
 #
 # The vendor partition is the untouched SEZB1 image (BoardConfigVendor.mk).
 # odm is built from the stock SEZB1 odm files plus additions the AOSP
-# framework needs (see bluetooth-audio/README.md).
+# framework needs (bluetooth-audio).
 #
 
 A235F_VENDOR_PATH := vendor/samsung/a235f
