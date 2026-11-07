@@ -3,3 +3,4 @@ images/** -text
 reference/** -text
 proprietary/** -text
 bluetooth-audio/lib/** -text
+odm-selinux/** -text

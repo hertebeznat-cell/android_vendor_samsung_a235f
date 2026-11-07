@@ -20,3 +20,11 @@ PRODUCT_PACKAGES += \
     a235f_android.hardware.bluetooth.audio@2.0-impl \
     a235f_audio.bluetooth.default \
     a235f_libbluetooth_audio_session
+
+# Stock /odm/etc/selinux in place of the build's precompiled_sepolicy, so init
+# compiles the policy with the stock vendor CIL (odm-selinux/Android.bp).
+PRODUCT_PACKAGES += \
+    a235f_odm_precompiled_sepolicy \
+    a235f_odm_precompiled_sepolicy.plat_sepolicy_and_mapping.sha256 \
+    a235f_odm_precompiled_sepolicy.system_ext_sepolicy_and_mapping.sha256 \
+    a235f_odm_precompiled_sepolicy.product_sepolicy_and_mapping.sha256
